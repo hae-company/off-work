@@ -13,6 +13,7 @@ export interface Channel {
   headerBg: string;
   accentColor: string;
   vibe: string;
+  chatName: string;
   events: ChannelEvent[];
 }
 
@@ -26,6 +27,7 @@ export const CHANNELS: Channel[] = [
     headerBg: "bg-gradient-to-r from-slate-100 to-blue-50",
     accentColor: "text-blue-600",
     vibe: "조용히 칼퇴를 노리는 중...",
+    chatName: "속닥속닥",
     events: [
       { text: "부장님이 자리를 비웠다! 지금이 찬스!", emoji: "👀", effect: "good" },
       { text: "갑자기 회의 소집... 30분 추가 각", emoji: "📋", effect: "bad" },
@@ -48,6 +50,7 @@ export const CHANNELS: Channel[] = [
     headerBg: "bg-gradient-to-r from-orange-100 to-amber-50",
     accentColor: "text-orange-600",
     vibe: "해 지기 전에 끝내자!",
+    chatName: "현장 무전",
     events: [
       { text: "비가 온다! 오늘 일찍 철수할 수도?", emoji: "🌧️", effect: "good" },
       { text: "안전교육 시간입니다. 잠깐 쉬어가세요", emoji: "⛑️", effect: "neutral" },
@@ -70,6 +73,7 @@ export const CHANNELS: Channel[] = [
     headerBg: "bg-gradient-to-r from-purple-100 to-pink-50",
     accentColor: "text-purple-600",
     vibe: "침대가 부른다...",
+    chatName: "슬랙 잡담방",
     events: [
       { text: "택배 도착! 잠깐 자리 비움", emoji: "📦", effect: "neutral" },
       { text: "갑자기 화상회의 카메라 켜야 한다... 급히 세수!", emoji: "📸", effect: "bad" },
@@ -92,6 +96,7 @@ export const CHANNELS: Channel[] = [
     headerBg: "bg-gradient-to-r from-amber-100 to-yellow-50",
     accentColor: "text-amber-700",
     vibe: "와이파이만 빠르면 여기가 천국",
+    chatName: "옆테이블 수다",
     events: [
       { text: "자리 눈치... 음료 한 잔 더 시켜야 하나", emoji: "👀", effect: "neutral" },
       { text: "옆 테이블에서 떠드는 중... 집중력 붕괴", emoji: "🗣️", effect: "bad" },
@@ -114,6 +119,7 @@ export const CHANNELS: Channel[] = [
     headerBg: "bg-gradient-to-r from-emerald-100 to-teal-50",
     accentColor: "text-emerald-600",
     vibe: "퇴근이 뭔지 잊어버린 사람들",
+    chatName: "당직 톡방",
     events: [
       { text: "콜 없이 1시간 경과! 기적 같은 평화", emoji: "🕊️", effect: "good" },
       { text: "응급 환자 입원! 퇴근 위기...", emoji: "🚑", effect: "bad" },
@@ -136,6 +142,7 @@ export const CHANNELS: Channel[] = [
     headerBg: "bg-gradient-to-r from-sky-100 to-cyan-50",
     accentColor: "text-sky-600",
     vibe: "종이 울려도 퇴근은 아직...",
+    chatName: "교무실 귓속말",
     events: [
       { text: "학부모 상담 전화가 왔다...", emoji: "📞", effect: "bad" },
       { text: "5교시 자습이다! 잠깐 쉬자", emoji: "📖", effect: "good" },

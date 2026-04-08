@@ -14,7 +14,8 @@ export default function ChannelList() {
           try {
             const res = await fetch(`/api/channel/${ch.id}`);
             const data = await res.json();
-            return { id: ch.id, count: data.participants?.length || 0 };
+            const count = (data.participants || []).filter((p: { status: string }) => p.status === "active").length;
+            return { id: ch.id, count };
           } catch {
             return { id: ch.id, count: 0 };
           }
@@ -29,8 +30,18 @@ export default function ChannelList() {
     return () => clearInterval(interval);
   }, []);
 
+  const totalOnline = Object.values(counts).reduce((a, b) => a + b, 0);
+
   return (
     <div className="w-full max-w-sm">
+      {/* 전체 접속자 */}
+      {totalOnline > 0 && (
+        <div className="flex items-center justify-center gap-1.5 mb-4 text-sm text-zinc-500">
+          <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+          <span>현재 <span className="font-bold text-zinc-700">{totalOnline}명</span> 근무 중</span>
+        </div>
+      )}
+
       <div className="grid grid-cols-2 gap-3">
         {CHANNELS.map((ch) => {
           const count = counts[ch.id] || 0;
