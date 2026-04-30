@@ -1,5 +1,6 @@
 import ChannelList from "@/components/ChannelList";
 import Clock from "@/components/Clock";
+import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export default function Home() {
@@ -41,9 +42,7 @@ export default function Home() {
       </div>
 
       {/* 푸터 */}
-      <footer className="mt-8 text-center text-xs text-zinc-300">
-        칼퇴는 모든 직장인의 꿈입니다
-      </footer>
+      <Footer />
     </main>
   );
 }

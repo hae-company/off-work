@@ -1,5 +1,6 @@
 import Calculator from "@/components/Calculator";
 import Clock from "@/components/Clock";
+import Footer from "@/components/Footer";
 
 export default function SoloPage() {
   return (
@@ -24,6 +25,8 @@ export default function SoloPage() {
       >
         ← 근무지 선택으로
       </a>
+
+      <Footer />
     </main>
   );
 }
